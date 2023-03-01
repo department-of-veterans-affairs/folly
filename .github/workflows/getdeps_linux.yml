@@ -4,18 +4,12 @@ name: linux
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-    - main
-  pull_request:
-    branches:
-    - main
 
 jobs:
   build:
     runs-on: ubuntu-8-cores-latest
     steps:
-    - run: hostname && whoami
+    - run: ifconfig
     - uses: actions/checkout@v2
     - name: Fetch boost
       run: python3 build/fbcode_builder/getdeps.py fetch --no-tests boost
