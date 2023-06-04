@@ -24,7 +24,6 @@ jobs:
         language:
           - cpp
           - python
-          - c
           - ruby
     steps:
       - name: Run Code Scanning
